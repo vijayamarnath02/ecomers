@@ -1,0 +1,81 @@
+  <app-navigator></app-navigator>
+<div *ngIf="errorMessage">
+  <span style="color:red;" class="alert alert-danger">{{ errorMessage }}<br></span>
+</div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Page</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="table">
+      <a class="" routerLink="/Sigin">Sign in</a>
+      <a class="active" routerLink="/singnup">Sign Up</a>
+    </div>
+    <div id="signup">
+      <form #myForm="ngForm" (ngSubmit)="register(myForm)">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" [(ngModel)]="myFormValue.username" required>
+          <div *ngIf="myForm.controls['username']?.touched && myForm.controls['username']?.invalid"
+            class="error-message" style="color: red;">
+            Please enter a username.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phno">Mobile Number</label>
+          <input type="text" id="phno" name="phno" [(ngModel)]="myFormValue.phno" required>
+          <div *ngIf="myForm.controls['phno']?.touched && myForm.controls['phno']?.invalid" class="error-message"
+            style="color: red;">
+            Please enter a PhoneNumber
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="myFormValue.email" required>
+          <div *ngIf="myForm.controls['email']?.touched && myForm.controls['email']?.invalid" class="error-message"
+            style="color: red;">
+            Please enter an Email
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="pass" [(ngModel)]="myFormValue.pass" required>
+          <div *ngIf="myForm.controls['pass']?.touched && myForm.controls['pass']?.invalid" class="error-message"
+            style="color: red;">
+            Please enter a Password
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cpass">Confirm Password</label>
+          <input type="password" id="cpass" name="cpass" [(ngModel)]="myFormValue.cpass" required>
+          <div *ngIf="myForm.controls['cpass']?.touched && myForm.controls['cpass']?.invalid" class="error-message"
+            style="color: red;">
+            Please enter a password.
+          </div>
+        
+        </div>
+
+        <div class="form-group">
+          <label id="checkbox">
+            <input type="checkbox" checked><span class="text">Keep me signed in</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Sign up">
+        </div>
+      </form>
+      <div class="hr"></div>
+      <a href="#" id="froget-pass">Forget Password?</a>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</body>
+
+</html>

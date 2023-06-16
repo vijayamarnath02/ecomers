@@ -1,0 +1,99 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero section */
+.hero {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.hero-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-image: url("/assets/images/arrival-bg.jpg");
+  height:350 px;
+  background-repeat: no-repeat;
+  padding: 120px 0px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+        max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Products section */
+.products {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-size: 18px;
+  color: #666;
+}
+
+.product .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.product .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer section */
+app-footer {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}

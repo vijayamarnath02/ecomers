@@ -1,0 +1,23 @@
+<app-navigator></app-navigator>
+
+<section class="hero">
+  <div class="hero-content"> 
+    <!-- <img src="assets/images/arrival-bg.jpg" alt=""/> -->
+    <h1 style="color: black;">Welcome to E-Shopping</h1>
+    <p style="color: black;">Discover the best deals and shop online!</p>
+  </div>
+</section>
+
+<section class="products">
+  <h2 style="color: black;">Featured Products</h2>
+  <div class="product-container">
+    <div class="product" *ngFor="let product of response">
+      <img [src]="product.path" alt="Product Image" style="width: 200px; max-height: 150px;">
+      <h3 style="color:black"><b>{{ product.Pname }}</b></h3>
+      <p class="price" style="color:black"><b>₹{{ product.Amount }}</b></p>
+      <a (click)="click(product.Pname,product.Amount )" class="btn"style="color:black">Add to Cart</a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

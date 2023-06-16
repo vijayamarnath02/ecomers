@@ -1,0 +1,29 @@
+   .title {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .tbl-cart th,
+    .tbl-cart td {
+      vertical-align: middle !important;
+    }
+
+    .tbl-cart img {
+      max-width: 47px;
+      max-height: 47px;
+    }
+
+    .tbl-cart .price,
+    .tbl-cart .total {
+      text-align: right;
+    }
+
+    .tbl-cart .input-qty {
+      width: 60px;
+    }
+
+    .btns-cart {
+      margin-top: 30px;
+      text-align: right;
+    }

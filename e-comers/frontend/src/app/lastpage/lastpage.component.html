@@ -1,0 +1,26 @@
+<app-navigator></app-navigator>
+<table class="table">
+  <thead>
+    <tr>
+ 
+      <th scope="col">Product Name</th>
+      <th scope="col">Quanity</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of response">
+      
+ <tr>
+   
+      <td>{{ product.Pname }}</td>
+      <td>{{ product.Count }}</td>
+      <td>{{product.Amount}}</td>
+      <td>{{ product.amount }}</td>
+    </tr>
+
+  </tbody>
+</table>
+<button type="button" (click)="submitData()">Submit</button>
+
+<app-footer></app-footer>

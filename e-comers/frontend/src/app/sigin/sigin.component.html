@@ -1,0 +1,59 @@
+<app-navigator></app-navigator>
+<html lang="en">
+<div *ngIf="errorMessage" >
+ <span style="color:red;"class="alert alert-danger"  > {{ errorMessage }}<br></span>
+</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="table">
+      <a class="active" routerLink="/Sigin">Sign in</a>
+      <a class="" routerLink="/singnup">Sign Up</a>
+    </div>
+    <div id="signin">
+     <form #myForm="ngForm" (ngSubmit)="register(myForm)" >
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="pls enter the email" [(ngModel)]="myFormValue.username" required autofocus>
+           <div *ngIf="myForm.controls['username']?.touched && myForm.controls['username']?.invalid" class="error-message" style="color: red;">
+            Please enter a Email.
+          </div>  
+
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" name="pass" placeholder="pls enter the password"[(ngModel)]="myFormValue.pass" required  autofocus>
+          <div *ngIf="myForm.controls['pass']?.touched && myForm.controls['pass']?.invalid" class="error-message" style="color: red;">
+            Please enter a password.
+          </div>  
+       
+        </div>
+        <div class="form-group">
+          <label id="checkbox">
+            <input type="checkbox" checked><span class="text">Keep me signed in </span>
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Sign in">
+        </div>
+      </form>
+    <div class="hr"></div>
+    <a href="#" id="froget-pass">Forget Password?</a>
+    
+    </div>
+    
+  </div>
+  
+</body>
+
+</html>

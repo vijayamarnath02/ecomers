@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a routerLink="/">
+    <img width=100 [src]="'assets/images/logo.png'" alert="image">
+  
+</a>
+
+    <div class="ml-auto" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+    
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cloths
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item"routerLink="/tshirt">T-shirts</a></li>
+            <li><a class="dropdown-item" routerLink="/shirt">Shirts</a></li>
+            <li><a class="dropdown-item" routerLink="/pants">Girls</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink="/addcart">Carts</a>
+       </li>
+         
+        <li class="nav-item"*ngIf="count == 1" >
+           <a class="nav-link" routerLink="/Sigin">Signin</a>
+       
+       <li class="nav-item" *ngIf="count == 1" >
+           <a class="nav-link" routerLink="/singnup">SignUp</a>
+       </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
